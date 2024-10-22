@@ -31,6 +31,11 @@ public final class App {
         });
 
         // BEGIN
+        app.get("articles/build", ctx -> {
+            var page = new BuildArticlePage();
+            ctx.render("articles/build.jte", model("page", page));
+        });
+
         app.post("/articles", ctx -> {
             try {
                 var title = ctx.formParamAsClass("title", String.class)

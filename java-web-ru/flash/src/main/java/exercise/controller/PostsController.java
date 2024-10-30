@@ -10,6 +10,7 @@ import exercise.util.NamedRoutes;
 import io.javalin.http.Context;
 import io.javalin.validation.ValidationException;
 import io.javalin.http.NotFoundResponse;
+import java.util.List;
 
 public class PostsController {
 

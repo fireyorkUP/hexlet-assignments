@@ -34,7 +34,7 @@ public class PostsController {
             String name = ctx.formParamAsClass("name", String.class)
                     .check(value -> value.length() >= 2, "Пост должен быть не короче 2 символов")
                     .get();
-            Post post = new Post(name,body);
+            Post post = new Post(name, body);
             PostRepository.save(post);
             ctx.sessionAttribute("flash", "Post was successfully created!");
             ctx.redirect(NamedRoutes.postsPath());

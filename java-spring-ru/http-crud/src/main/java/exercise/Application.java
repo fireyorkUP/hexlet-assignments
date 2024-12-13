@@ -27,7 +27,7 @@ public class Application {
     }
 
     // BEGIN
-    @GetMapping
+    @GetMapping("/posts")
     public List<Post> index(@RequestParam(defaultValue = "10") Integer limit) {
         return posts.stream().limit(limit).toList();
     }
